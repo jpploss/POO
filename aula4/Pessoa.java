@@ -49,7 +49,7 @@ public class Pessoa
 
     private void fillParentes(java.util.Set<Pessoa> parentes)
     {
-        if(parentes.contains(this)) {
+        if(parentes.contains(this)) { // tratamento para laço na genealogia
             System.out.println("Laço na genealogia!");
             System.exit(1);
             // return;
@@ -58,7 +58,6 @@ public class Pessoa
         parentes.add(this);
         if(this.mae != null) this.mae.fillParentes(parentes);
         if(this.pai != null) this.pai.fillParentes(parentes);
-
     }
 
     public java.util.Set<Pessoa> getParentes()
@@ -66,12 +65,9 @@ public class Pessoa
         // java.util.LinkedList<Pessoa> parentes = new java.util.LinkedList<Pessoa>();
         java.util.Set<Pessoa> parentes = new java.util.HashSet<Pessoa>();
 
-        if(this.mae != null) {
-            this.mae.fillParentes(parentes);
-        }
-        if(this.pai != null) {
-            this.pai.fillParentes(parentes);
-        }
+        if(this.mae != null) this.mae.fillParentes(parentes);
+        if(this.pai != null) this.pai.fillParentes(parentes);
+
         return parentes;
     }
 
