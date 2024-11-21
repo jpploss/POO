@@ -17,6 +17,7 @@ public class Empresa {
     public void addDepartamento(Departamento departamento)
     {
         this.departamentos.add(departamento);
+        departamento.setEmpresaOrigemDepartamento(this);
     }
 
     public java.util.Set<Departamento> getDepartamentos() 

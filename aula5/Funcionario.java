@@ -1,6 +1,7 @@
 public class Funcionario {
     private String nome;
     private float salario;
+    private Departamento departamentoDeOrigem;
 
     public Funcionario(String nome, float salario)
     {
@@ -16,6 +17,16 @@ public class Funcionario {
     public float getSalario() 
     {
         return this.salario;
+    }
+
+    public void setDepartamentoOrigemFuncionario(Departamento d)
+    {
+        this.departamentoDeOrigem = d;
+    }
+
+    public Departamento getDepartamentoOrigemFuncionario()
+    {
+        return this.departamentoDeOrigem;
     }
 
     @Override

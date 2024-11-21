@@ -36,5 +36,7 @@ public class App {
             }
         }
 
+        System.out.println("Departamento de joao: " + joao.getDepartamentoOrigemFuncionario());
+        System.out.println("Empresa contendo o departamento de vendas: " + vendas.getEmpresaOrigemDepartamento());
     }
 }
