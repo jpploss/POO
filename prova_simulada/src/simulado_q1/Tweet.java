@@ -19,3 +19,4 @@ public class Tweet {
         return this.tweet.length();
     }
 }
+
